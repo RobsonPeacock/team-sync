@@ -29,3 +29,5 @@ end
 
 
 gem "slim", "~> 5.2"
+
+gem "devise", "~> 4.9"
