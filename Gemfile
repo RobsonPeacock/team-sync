@@ -27,3 +27,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "slim", "~> 5.2"
