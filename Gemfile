@@ -31,3 +31,7 @@ end
 gem "slim", "~> 5.2"
 
 gem "devise", "~> 4.9"
+
+gem "bootstrap", "~> 5.3"
+
+gem "sassc-rails", "~> 2.1"
