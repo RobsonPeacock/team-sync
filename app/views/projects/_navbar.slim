@@ -1,0 +1,5 @@
+nav.navbar.navbar-light.bg-light.text-white.px-3
+  a.navbar-brand TeamSync
+
+  - if user_signed_in?
+    = link_to 'Log Out', '#', class: 'btn btn-danger'
