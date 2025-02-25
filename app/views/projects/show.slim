@@ -1,5 +1,5 @@
 p 
   = @project.name
 
-- @project.comments.each do |comment|
-  = comment.text
+= render "comments/form", project: @project, comment: @comment
+= render partial: "comments/comment", collection: @project.comments                                        
