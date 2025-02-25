@@ -1,3 +1,16 @@
-- @projects.each do |project|
-  p
-    = project.name
+.row
+  .col-md-12
+    h2.mb-4.text-center Your Active Projects
+    
+    .row.row-cols-1.row-cols-md-2.g-4
+      - @projects.each do |project|
+        .col
+          .card.project-card.h-100.p-3
+            .d-flex.align-items-center.mb-3
+              div
+                h5.project-title
+                  = project.name
+                small.text-muted
+                  = "Created #{time_ago_in_words(project.created_at)} ago"
+              
+            = link_to 'View Project', project_path(project), class: 'btn btn-outline-primary mt-auto'

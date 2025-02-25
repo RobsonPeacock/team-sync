@@ -1,3 +1,44 @@
 body {
   background: linear-gradient(135deg, #e0f7fa, #c2e0f9);
 }
+
+$color_1: white;
+$color_2: #1e88e5;
+$color_3: #555;
+
+.project-card {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	&:hover {
+		transform: translateY(-5px);
+	}
+}
+
+.create-btn {
+	background: linear-gradient(to right, #64b5f6, #1e88e5);
+	color: $color_1;
+	border: none;
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.modal-content {
+	background: linear-gradient(to bottom, #f0f8ff, #e1f5fe);
+}
+
+.project-icon {
+	font-size: 2em;
+	color: $color_2;
+}
+
+.project-title {
+	font-weight: 600;
+}
+
+.project-description {
+	font-style: italic;
+	color: $color_3;
+}
