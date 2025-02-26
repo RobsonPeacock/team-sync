@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :projects, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  validates :username, presence: true
 end
