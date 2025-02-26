@@ -5,6 +5,7 @@ body {
 $color_1: white;
 $color_2: #1e88e5;
 $color_3: #555;
+$msg-background-color_1: #B9B7BD;
 
 .project-card {
 	background: rgba(255, 255, 255, 0.8);
@@ -41,4 +42,32 @@ $color_3: #555;
 .project-description {
 	font-style: italic;
 	color: $color_3;
+}
+
+.chat-container {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.chat-messages {
+	flex-grow: 1;
+	overflow-y: auto;
+	padding: 20px;
+}
+
+.message {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.message.received {
+	background-color: $msg-background-color_1;
+	align-self: flex-start;
+}
+
+.message-input {
+	padding: 10px;
+	border-top: 1px solid #dee2e6;
 }

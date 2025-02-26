@@ -1,5 +1,9 @@
-p 
-  = @project.name
+div
+  h3.text-center
+    = @project.name
+
+.container.chat-container.mt-4
+  #chatMessages.chat-messages
+    = render partial: "comments/comment", collection: @project.comments
 
 = render "comments/form", project: @project, comment: @comment
-= render partial: "comments/comment", collection: @project.comments                                        
