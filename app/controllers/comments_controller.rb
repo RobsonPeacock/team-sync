@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to project_url(@project), notice: "Comment was created successfully" }
+        format.html { redirect_to project_url(@project) }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new, status: :unprocessable_entity }
