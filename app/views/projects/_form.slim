@@ -4,4 +4,8 @@
     = form.text_field :name
 
   div
+    = form.label :status
+    = form.select :status, Project.statuses.keys
+
+  div
     = form.submit

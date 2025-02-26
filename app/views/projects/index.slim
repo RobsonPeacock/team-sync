@@ -10,7 +10,10 @@
               div
                 h5.project-title
                   = project.name
-                small.text-muted
-                  = "Created #{time_ago_in_words(project.created_at)} ago"
-              
-            = link_to 'View Project', project_path(project), class: 'btn btn-outline-primary mt-auto'
+                li.list-unstyled
+                  small.text-muted
+                    = "Created #{time_ago_in_words(project.created_at)} ago"
+                li.list-unstyled
+                  small.text-muted
+                    = "Status: #{project.status.capitalize}"
+            = link_to 'View Project', project_path(project), class: 'btn btn-outline-primary mt-auto w-100'
