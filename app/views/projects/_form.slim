@@ -1,11 +1,14 @@
-= form_with model: @project do |form|
-  div
-    = form.label :name
-    = form.text_field :name
+.row.d-flex.justify-content-center.align-items-center.h-100
+  .col-12.col-md-8.col-lg-6.col-xl-5
+    .mb-md-5.mt-md-4.pb-5
+      = form_with model: @project do |form|
+        div
+          = form.label :name, class: "form-label"
+          = form.text_field :name, class: "form-control form-control-lg"
 
-  div
-    = form.label :status
-    = form.select :status, Project.statuses.keys
+        div
+          = form.label :status, class: "form-label"
+          = form.select :status, Project.statuses.keys, {}, { class: "form-control form-control-lg" }
 
-  div
-    = form.submit
+        div
+          = form.submit 'Submit', class: "btn btn-primary mt-3"

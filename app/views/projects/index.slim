@@ -16,4 +16,8 @@
                 li.list-unstyled
                   small.text-muted
                     = "Status: #{project.status.capitalize}"
-            = link_to 'View Project', project_path(project), class: 'btn btn-outline-primary mt-auto w-100'
+            .row  
+              .col-lg-3
+                = link_to 'Edit', edit_project_path(project), class: 'btn btn-secondary mb-2 w-100'
+              .col-lg-9
+                = link_to 'View Project', project_path(project), class: 'btn btn-outline-primary mt-auto w-100'
